@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "764ab1bb61d22955",
+        "id": "69f85ea83cbc76a4",
         "type": "tabs",
         "children": [
           {
-            "id": "0a596358f0c03eff",
+            "id": "7877a38d2e7ed5d1",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -44,7 +44,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Commands",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -138,20 +138,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "0a596358f0c03eff",
+  "active": "7877a38d2e7ed5d1",
   "lastOpenFiles": [
     "Oribot v5.0.0 - Tree.md",
-    "User Customization.md",
     "Storage.md",
-    "Miscellaneous.md",
-    "Data Migration.md",
-    "Basic User Customization.md",
-    "Passive Bot Interactions.md",
-    "README.md",
+    "User Customization.md",
+    "Traditional Commands.md",
     "Slash Commands.md",
-    "Logging.md",
+    "README.md",
+    "Permission Access.md",
+    "Passive Commands.md",
+    "Passive Bot Interactions.md",
     "Moderation Features.md",
-    "Passive.md",
+    "Miscellaneous.md",
+    "Logging.md",
+    "Data Migration.md",
+    "().md",
+    "Basic User Customization.md",
     "ModerationFeatures.md",
     "PassiveBotInteractions.md",
     "Moderation.md"

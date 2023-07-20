@@ -1,7 +1,7 @@
+#command-handling #permission-access #mod-commands #admin 
 
 ## Moderator Commands 
-These are the moderator commands as listed on #Commands #command-handling 
-
+These are the moderator commands as listed on the [main tree](Oribot%20v5.0.0%20-%20Tree)
 
 `>> mute [User ID] [Reason] [Duration]`
 	Mutes a user for the given duration, logs the mute, and DMs them with [Reason]. Moderator only.
@@ -26,11 +26,13 @@ These are the moderator commands as listed on #Commands #command-handling
 	
 `>> addbadge [User ID] [Badge Name]`
 	Adds a badge to a user's profile. Moderator only.
-	
+
+#suggestions 
 `>> chw [channel-id]` (alias)
 `>> channelWhitelist [channel-id]`
 	Whitelists a channel for the bot to not monitor
 
+#suggestions 
 `>> chs [channel-id] [ bot | logs | art ]` (alias)
 `>> channelSettings [channel-id] [ bot | logs | art ]`
 	Sets a channel if it is either a bot-commands channel, a log channel, or an art-gallery channel.

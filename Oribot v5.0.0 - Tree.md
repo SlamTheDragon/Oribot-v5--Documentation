@@ -1,24 +1,28 @@
-## What's Oribot?
+#outline #suggestions 
+
+## What is Oribot?
 
 A custom bot running on .NET 6 that is built from the ground up for the Ori the Game Discord, utilizing Discord.NET and NoSQL Database.
 
 
-#outline
 ## Project Scope  
 - [Moderation Features](Moderation%20Features.md)
 - [User Customization](User%20Customization.md)
 - [Passive Bot Interactions](Passive%20Bot%20Interactions.md)
+- [...]
 
 ## Bot Infrastructure
 - [Logging](Logging) #logging
 - Command Handling #command-handling 
-	- [Passive](Passive)
+	- [Passive Commands](Passive%20Commands.md)
 	- [Slash Commands](Slash%20Commands.md)
-	- [Traditional](Traditional)
+	- [Traditional Commands](Traditional%20Commands.md)
 - [Storage](Storage) #storage 
+- [Permission Access](Permission%20Access.md) #permission-access 
 - ...
 
 ## Mandatory Features
+**REVISION NEEDED**
 
 - Must have a simple command structure. This means more commands, less subcommands.
 	- Break up command trees into more easily digested, smaller commands with fewer subcommands
@@ -34,7 +38,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 - Must be compatible with existing data.
 	- Alternatively, write conversion script to convert existing data to the new format.
 - Reimplement the existing profile system with identical features in JSON.
-- Reimplement access controls
+- Reimplement access controls #permission-access 
 	- Simplify with a tighter scale, rather than 0 to 128 like now
 		- New User
 		- Validated User
@@ -57,6 +61,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 
 ## Potential (Slash) #Commands
 
+#mod-commands 
 `>> mute [User ID] [Reason] [Duration]`
 	Mutes a user for the given duration, logs the mute, and DMs them with [Reason]. Moderator only.
 
@@ -78,6 +83,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 `>> ban [User ID] [Reason]`
 	Bans the given user and DMs them with [Reason]. Moderator only.
 
+#user-commands
 `>> profile [User ID]`
 	Brings up a user's profile, or your own if you don't include an ID.
 
@@ -86,31 +92,37 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 
 `>> updatebio [Bio Text]`
 	Updates the bio entry of your profile.
+%%can perhaps add a subcommand under profile? Same goes to others (just in case)%%
 
+#mod-commands 
 `>> addbadge [User ID] [Badge Name]`
 	Adds a badge to a user's profile. Moderator only.
 
+#user-commands 
 `>> color [Color Name | List]`
 	Adds a color role to you, or lists available colors.
 
 `>> hug`
 	Ori gives you a hug! (unless… :flushed:)
 
+#admin #suggestions **Added Suggestion by Slam - [reason]**
 `>> restart [reason]
 	Forces the bot to restart. Bot Admin Only. [reason] is optional.
 
+#admin #suggestions **Added Suggestion by Slam - [reason]**
 `>> shutdown [reason]`
 	Shuts the bot down. Bot Admin Only. [reason] is optional.
 
+#user-commands
 `>> ticket`
 	Opens a thread where moderators can address an issue.
 
-#suggestions
-**NEW - Suggestions by Slam**
+#admin #suggestions **by Slam**
 `>> chw [channel-id]` (alias)
 `>> channelWhitelist [channel-id]`
 	Whitelists a channel for the bot to not monitor
 
-`>> chs [channel-id] [ bot | logs | art ]` (alias)
-`>> channelSettings [channel-id] [ bot | logs | art ]`
+#admin #suggestions **by Slam**
+`>> chs [channel-id] [bot | logs | art]` (alias)
+`>> channelSettings [channel-id] [ bot | logs | art]`
 	Sets a channel if it is either a bot-commands channel, a log channel, or an art-gallery channel.
