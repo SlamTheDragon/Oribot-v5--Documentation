@@ -11,8 +11,12 @@
             "id": "7877a38d2e7ed5d1",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Oribot v5.0.0 - Tree.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Oribot v5.0.0 - Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Oribot v5.0.0 - Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Oribot v5.0.0 - Tree.md"
+              }
             }
           }
         ]
@@ -138,7 +146,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "7877a38d2e7ed5d1",
+  "active": "b91d412019cd7f9a",
   "lastOpenFiles": [
     "Oribot v5.0.0 - Tree.md",
     "Storage.md",
