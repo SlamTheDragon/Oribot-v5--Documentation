@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "a23c89cd18030934",
+        "id": "764ab1bb61d22955",
         "type": "tabs",
         "children": [
           {
-            "id": "2802655dc33e08cf",
+            "id": "0a596358f0c03eff",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Oribot v5.0.0 - Tree.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Oribot v5.0.0 - Tree.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Oribot v5.0.0 - Tree.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Oribot v5.0.0 - Tree.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -146,16 +138,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "2802655dc33e08cf",
+  "active": "0a596358f0c03eff",
   "lastOpenFiles": [
-    "Basic User Customization.md",
-    "User Customization.md",
     "Oribot v5.0.0 - Tree.md",
-    "Data Migration.md",
+    "User Customization.md",
+    "Storage.md",
     "Miscellaneous.md",
+    "Data Migration.md",
+    "Basic User Customization.md",
     "Passive Bot Interactions.md",
     "README.md",
-    "Storage.md",
     "Slash Commands.md",
     "Logging.md",
     "Moderation Features.md",

@@ -6,7 +6,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 #outline
 ## Project Scope  
 - [Moderation Features](Moderation%20Features.md)
-- [Basic User Customization](Basic%20User%20Customization.md)
+- [User Customization](User%20Customization.md)
 - [Passive Bot Interactions](Passive%20Bot%20Interactions.md)
 
 ## Bot Infrastructure
@@ -16,7 +16,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 	- [Slash Commands](Slash%20Commands.md)
 	- [Traditional](Traditional)
 - [Storage](Storage) #storage 
-- 
+- ...
 
 ## Mandatory Features
 
@@ -44,6 +44,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 	- Allow use of ticket within the server for less confusion
 - Add Bot-Commands responses
 
+#misc
 ### Optional features
 - Dice Rolls
 
@@ -104,7 +105,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 `>> ticket`
 	Opens a thread where moderators can address an issue.
 
-
+#suggestions
 **NEW - Suggestions by Slam**
 `>> chw [channel-id]` (alias)
 `>> channelWhitelist [channel-id]`

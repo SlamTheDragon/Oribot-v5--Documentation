@@ -7,3 +7,5 @@ User profile customization `>> profile [User ID]` #Commands #command-handling
 
 #storage
 ### Storage
+Refer to [Storage](Storage)
+[...]
