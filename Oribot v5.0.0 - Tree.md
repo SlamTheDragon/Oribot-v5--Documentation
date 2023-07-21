@@ -1,56 +1,70 @@
-#outline #suggestions 
+#suggestions 
 
 ## What is Oribot?
 
 A custom bot running on .NET 6 that is built from the ground up for the Ori the Game Discord, utilizing Discord.NET and NoSQL Database.
 
 
-## Project Scope  
+# Table of Contents
+- [Features](#Project%20Scope%20|%20Features)
+- [Infrastructure](#Bot%20Infrastructure)
+- [Design Ideas](#Design%20Ideas%20|%20Mandatory%20Features)
+- [Command Summary](#Potential%20(Slash)%20Commands)
+
+## Project Scope | Features
+- [Safety & Setup](Safety%20&%20Setup.md)
 - [Moderation Features](Moderation%20Features.md)
-- [User Customization](User%20Customization.md)
 - [Passive Bot Interactions](Passive%20Bot%20Interactions.md)
+- [User Features](User%20Features.md)
 - [...]
 
 ## Bot Infrastructure
 - [Logging](Logging) #logging
 - Command Handling #command-handling 
-	- [Passive Commands](Passive%20Commands.md)
+	- [Passive Command List](Passive%20Command%20List.md)
 	- [Slash Commands](Slash%20Commands.md)
 	- [Traditional Commands](Traditional%20Commands.md)
 - [Storage](Storage) #storage 
-- [Permission Access](Permission%20Access.md) #permission-access 
-- ...
+- [Permission System](Permission%20System.md) #permission-access 
+- [...]
 
-## Mandatory Features
+## Design Ideas | Mandatory Features
 **REVISION NEEDED**
 
-- Must have a simple command structure. This means more commands, less subcommands.
+#command-handling
+- Must have a simple command structure. This means more commands, less subcommands. 
 	- Break up command trees into more easily digested, smaller commands with fewer subcommands
 	- Test moving to slash commands
+#logging 
 - Overhauled log system. Must be able to enter, view and delete entries.
 	- Implement a feature for deleting log entries instead of simply hiding them
 	- Must use JSON database for more reliable storage
 	- Bot must DM the user any warns, mutes, bans etc.
+#system
 - Should migrate anti-spam, Steam API, and Gallery Pins since they’re API-independent.
+#system 
 - Improve maintainability of the bot
 	- Implement encapsulation
 	- Should be accessible for multiple servers.
-- Must be compatible with existing data.
-	- Alternatively, write conversion script to convert existing data to the new format.
 - Reimplement the existing profile system with identical features in JSON.
-- Reimplement access controls #permission-access 
+#permission-access 
+- Reimplement access controls. see [Permission Levels](Moderation%20Features#Permission%20Levels)
 	- Simplify with a tighter scale, rather than 0 to 128 like now
 		- New User
 		- Validated User
 		- Moderator
 		- Bot Admin
+#admin  
 - Rework the ticket system
 	- Allow use of ticket within the server for less confusion
-- Add Bot-Commands responses
-
-#misc
-### Optional features
+#command-handling 
+- Add Bot-Commands responses 
+#misc #command-handling 
 - Dice Rolls
+
+
+- Must be compatible with existing data.
+	- Alternatively, write conversion script to convert existing data to the new format.
 
 ### Libraries and Targets
 - C#
@@ -59,9 +73,9 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 - JSON NoSQL Database
 
 
-## Potential (Slash) #Commands
+## Potential (Slash) Commands
 
-#mod-commands 
+#mod-commands | More Info [Here](Moderation%20Features#Moderator%20Commands)
 `>> mute [User ID] [Reason] [Duration]`
 	Mutes a user for the given duration, logs the mute, and DMs them with [Reason]. Moderator only.
 
@@ -83,46 +97,50 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 `>> ban [User ID] [Reason]`
 	Bans the given user and DMs them with [Reason]. Moderator only.
 
-#user-commands
+`>> addbadge [User ID] [Badge Name]`
+	Adds a badge to a user's profile. Moderator only.
+
+
+#admin | More Info [Here](Moderation%20Features#Admin%20Commands)
+`>> restart [reason]`  #suggestions **Added Suggestion by Slam - [reason]**
+	Forces the bot to restart. Bot Admin Only. [reason] is optional.
+
+`>> shutdown [reason]` #suggestions **Added Suggestion by Slam - [reason]**
+	Shuts the bot down. Bot Admin Only. [reason] is optional.
+
+#suggestions **by Slam**
+`>> chw [channel-id]` (alias)
+`>> channelWhitelist [channel-id]`
+	Whitelists a channel for the bot to not monitor
+
+#suggestions **by Slam**
+`>> chs [Channel ID] [bot | logs | art]` (alias)
+`>> channelSettings [Channel ID] [ bot | logs | art]`
+	Sets a channel if it is either a bot-commands channel, a log channel, or an art-gallery channel.
+
+
+#user-commands | More Info [Here](User%20Features)
 `>> profile [User ID]`
 	Brings up a user's profile, or your own if you don't include an ID.
 
 `>> updatestatus [Status Text]`
-	Updates the status entry of your profile.
+	Updates the status entry of your profile. %%what's this%%
 
 `>> updatebio [Bio Text]`
 	Updates the bio entry of your profile.
 %%can perhaps add a subcommand under profile? Same goes to others (just in case)%%
 
-#mod-commands 
-`>> addbadge [User ID] [Badge Name]`
-	Adds a badge to a user's profile. Moderator only.
-
-#user-commands 
 `>> color [Color Name | List]`
 	Adds a color role to you, or lists available colors.
 
 `>> hug`
 	Ori gives you a hug! (unless… :flushed:)
 
-#admin #suggestions **Added Suggestion by Slam - [reason]**
-`>> restart [reason]
-	Forces the bot to restart. Bot Admin Only. [reason] is optional.
-
-#admin #suggestions **Added Suggestion by Slam - [reason]**
-`>> shutdown [reason]`
-	Shuts the bot down. Bot Admin Only. [reason] is optional.
-
-#user-commands
 `>> ticket`
 	Opens a thread where moderators can address an issue.
 
-#admin #suggestions **by Slam**
-`>> chw [channel-id]` (alias)
-`>> channelWhitelist [channel-id]`
-	Whitelists a channel for the bot to not monitor
+`>> info`
+	Displays all the bot's metadata, owner, contributors, version, and etc.
 
-#admin #suggestions **by Slam**
-`>> chs [channel-id] [bot | logs | art]` (alias)
-`>> channelSettings [channel-id] [ bot | logs | art]`
-	Sets a channel if it is either a bot-commands channel, a log channel, or an art-gallery channel.
+`>> help [command]`
+	sends a list of commands/command usage
