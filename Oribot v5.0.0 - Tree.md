@@ -144,3 +144,5 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 
 `>> help [command]`
 	sends a list of commands/command usage
+
+[;main]

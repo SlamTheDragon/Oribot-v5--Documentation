@@ -16,3 +16,6 @@ User profile customization `>> profile [User ID]`
 ```C#
 // stuff
 ```
+
+
+[;main-bot]

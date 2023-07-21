@@ -88,4 +88,4 @@ Description
 // placeholder
 ```
 
-[...]
+[;main-bot]
