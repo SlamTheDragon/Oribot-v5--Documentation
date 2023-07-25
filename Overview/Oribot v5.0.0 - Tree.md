@@ -1,4 +1,3 @@
-#suggestions 
 
 ## What is Oribot?
 
@@ -6,10 +5,12 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 
 
 # Table of Contents
-- [Features](#Project%20Scope%20|%20Features)
-- [Infrastructure](#Bot%20Infrastructure)
-- [Design Ideas](#Design%20Ideas%20|%20Mandatory%20Features)
-- [Command Summary](#Potential%20(Slash)%20Commands)
+- [Table of Contents](#table-of-contents)
+	- [Project Scope | Features](#project-scope--features)
+	- [Bot Infrastructure](#bot-infrastructure)
+	- [Design Ideas | Mandatory Features](#design-ideas--mandatory-features)
+		- [Libraries and Targets](#libraries-and-targets)
+	- [Potential (Slash) Commands](#potential-slash-commands)
 
 ## Project Scope | Features
 - [Safety & Setup](Safety%20&%20Setup.md)
@@ -19,12 +20,11 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 - [...]
 
 ## Bot Infrastructure
-- [Logging](Logging) #logging
+- [Logging](Logging.md) #logging
 - Command Handling #command-handling 
 	- [Passive Command List](Passive%20Command%20List.md)
 	- [Slash Commands](Slash%20Commands.md)
-	- [Traditional Commands](Traditional%20Commands.md)
-- [Storage](Storage) #storage 
+- [Storage](Storage.md) #storage 
 - [Permission System](Permission%20System.md) #permission-access 
 - [...]
 
@@ -48,7 +48,7 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 	- Should be accessible for multiple servers.
 - Reimplement the existing profile system with identical features in JSON.
 #permission-access 
-- Reimplement access controls. see [Permission Levels](Moderation%20Features#Permission%20Levels)
+- Reimplement access controls. see [Permission Levels](Moderation%20Features.md#Permission%20Levels)
 	- Simplify with a tighter scale, rather than 0 to 128 like now
 		- New User
 		- Validated User
@@ -75,74 +75,74 @@ A custom bot running on .NET 6 that is built from the ground up for the Ori the 
 
 ## Potential (Slash) Commands
 
-#mod-commands | More Info [Here](Moderation%20Features#Moderator%20Commands)
-`>> mute [User ID] [Reason] [Duration]`
+#mod-commands | More Info [Here](Moderation%20Features.md#Moderator%20Commands)
+`/mute [User ID] [Reason] [Duration]`
 	Mutes a user for the given duration, logs the mute, and DMs them with [Reason]. Moderator only.
 
-`>> unmute [User ID] [Reason]`
+`/unmute [User ID] [Reason]`
 	Unmutes a user. Moderator only.
 
-`>> warn [harsh, minor] [User ID] [Reason]`
+`/warn [harsh, minor] [User ID] [Reason]`
 	DMs the user with an automated warning, and logs it internally. Moderator only.
 
-`>> warnlog [User ID] [Entry Index]`
+`/warnlog [User ID] [Entry Index]`
 	Allows for viewing a user's log, or view a specified entry. Moderator only.
 
-`>> deletelog  [User ID] [Entry Index] [Reason]`
+`/deletelog  [User ID] [Entry Index] [Reason]`
 	Deletes the given log entry and logs a reason for deletion. Moderator only.
 
-`>> note [User ID] [Note Content]`
+`/note [User ID] [Note Content]`
 	Logs a note about a potentially problematic user. Moderator only.
 
-`>> ban [User ID] [Reason]`
+`/ban [User ID] [Reason]`
 	Bans the given user and DMs them with [Reason]. Moderator only.
 
-`>> addbadge [User ID] [Badge Name]`
+`/addbadge [User ID] [Badge Name]`
 	Adds a badge to a user's profile. Moderator only.
 
 
-#admin | More Info [Here](Moderation%20Features#Admin%20Commands)
-`>> restart [reason]`  #suggestions **Added Suggestion by Slam - [reason]**
+#admin | More Info [Here](Moderation%20Features.md#Admin%20Commands)
+`/restart [reason]`  #suggestions **Added Suggestion by Slam - [reason]**
 	Forces the bot to restart. Bot Admin Only. [reason] is optional.
 
-`>> shutdown [reason]` #suggestions **Added Suggestion by Slam - [reason]**
+`/shutdown [reason]` #suggestions **Added Suggestion by Slam - [reason]**
 	Shuts the bot down. Bot Admin Only. [reason] is optional.
 
 #suggestions **by Slam**
-`>> chw [channel-id]` (alias)
-`>> channelWhitelist [channel-id]`
+`/chw [channel-id]` (alias)
+`/channelWhitelist [channel-id]`
 	Whitelists a channel for the bot to not monitor
 
 #suggestions **by Slam**
-`>> chs [Channel ID] [bot | logs | art]` (alias)
-`>> channelSettings [Channel ID] [ bot | logs | art]`
+`/chs [Channel ID] [bot | logs | art]` (alias)
+`/channelSettings [Channel ID] [ bot | logs | art]`
 	Sets a channel if it is either a bot-commands channel, a log channel, or an art-gallery channel.
 
 
-#user-commands | More Info [Here](User%20Features)
-`>> profile [User ID]`
+#user-commands | More Info [Here](User%20Features.md)
+`/profile [User ID]`
 	Brings up a user's profile, or your own if you don't include an ID.
 
-`>> updatestatus [Status Text]`
+`/updatestatus [Status Text]`
 	Updates the status entry of your profile. %%what's this%%
 
-`>> updatebio [Bio Text]`
+`/updatebio [Bio Text]`
 	Updates the bio entry of your profile.
 %%can perhaps add a subcommand under profile? Same goes to others (just in case)%%
 
-`>> color [Color Name | List]`
+`/color [Color Name | List]`
 	Adds a color role to you, or lists available colors.
 
-`>> hug`
+`/hug`
 	Ori gives you a hug! (unless… :flushed:)
 
-`>> ticket`
+`/ticket`
 	Opens a thread where moderators can address an issue.
 
-`>> info`
+`/info`
 	Displays all the bot's metadata, owner, contributors, version, and etc.
 
-`>> help [command]`
+`/help [command]`
 	sends a list of commands/command usage
 
 [;main]
